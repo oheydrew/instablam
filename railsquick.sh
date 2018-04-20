@@ -18,6 +18,8 @@ then
     rails generate rspec:install
     echo 'RAILSQUICK: Rails Devise:Install ----------------------------------------'
     rails generate devise:install
+    echo 'RAILSQUICK: Rails Devise:Install ----------------------------------------'
+    rails generate devise:install
 
     echo 'RAILSQUICK: rspec/requires: cp spec/rails_helper.rb ---------------------'
     cp -rf _railsquick/rails_helper.rb spec/rails_helper.rb
