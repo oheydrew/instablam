@@ -61,6 +61,8 @@ group :development, :test do
   gem 'faker'
   # cleans database between tests
   gem 'database_cleaner', '~> 1.5'
+  # Use dotenv-rails for environment varibles
+  gem 'dotenv-rails'
 
 # ------------------------------------- RAILS DEFAULT
 
