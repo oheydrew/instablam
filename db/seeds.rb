@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+users = {
+  email: ENV.fetch('USER_EMAIL'),
+  password: ENV.fetch('USER_PASSWORD')
+}
+
+User.create!(users) { |user| puts "#{user.email} seeded"}
