@@ -1,0 +1,57 @@
+<h1>Editing Profile</h1>
+
+<%= form_with(model: @profile) do |form| %>
+    <p>
+        <%= form.label :user_name %><br/>
+        <%= form.text_field :user_name %>
+    </p>
+    <p>
+        <%= form.label :first_name %><br/>
+        <%= form.text_field :first_name %>
+    </p>
+    <p>
+        <%= form.label :last_name %><br/>
+        <%= form.text_field :last_name %>
+    </p>
+    <p>
+        <%= form.label :website %><br/>
+        <%= form.text_field :website %>
+    </p>
+    <p>
+        <%= form.label :bio %><br/>
+        <%= form.text_field :bio %>
+    </p>
+    <p>
+        <%= form.label :avatar_data %><br/>
+        <%= form.text_field :avatar_data %>
+    </p>
+    <p>
+        <%= form.label :premise %><br/>
+        <%= form.text_field :premise %>
+    </p>
+    <p>
+        <%= form.label :thoroughfare %><br/>
+        <%= form.text_field :thoroughfare %>
+    </p>
+    <p>
+        <%= form.label :city %><br/>
+        <%= form.text_field :city %>
+    </p>
+    <p>
+        <%= form.label :administrative_area %><br/>
+        <%= form.text_field :administrative_area %>
+    </p>
+    <p>
+        <%= form.label :postal_code %><br/>
+        <%= form.text_field :postal_code %> 
+    </p> 
+    <p>
+        <%= form.label :country %><br/>
+        <%= form.country_select :country, priority_countries: ["AU", "NZ"] %> 
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
+
+<%= link_to 'Show', profile_path %> | <%= link_to 'Back', root_path %>
