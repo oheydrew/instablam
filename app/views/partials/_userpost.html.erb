@@ -1,0 +1,7 @@
+<br/>
+<div class="d-flex justify-content-between flex-column">
+    <p><%= image_tag post.image_data, width: "100%" %></p>
+    <p><%= post.description %></p>
+    <p><%= post.user.email %> | <%= link_to post.created_at.strftime("%A, %B %d @ %H:%M"), post_path(post[:id]) %></p>
+    <hr>
+</div>
