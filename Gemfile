@@ -20,6 +20,8 @@ gem 'hirb'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 # Use pundit for user authorization
 gem 'pundit'
+# Use country_select for country codes
+gem 'country_select'
 
 # ------------------------------------- RAILS DEFAULT
 
