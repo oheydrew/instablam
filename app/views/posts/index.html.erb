@@ -17,8 +17,8 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.user %></td>
-        <td><%= post.image_data %></td>
+        <td><%= post.user.email %></td>
+        <td><%= image_tag post.image_data, width: 300 %></td>
         <td><%= post.caption %></td>
         <td><%= post.like %></td>
         <td><%= post.comment %></td>
