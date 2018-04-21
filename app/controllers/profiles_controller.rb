@@ -40,10 +40,6 @@ class ProfilesController < ApplicationController
 
   end
 
-  def full_address
-   "#{@profile.premise}, #{@profile.thoroughfare}, #{@profile.city}, #{@profile.administrative_area}, #{@profile.postal_code}, #{@profile.country_code}"
-  end
-
   private
 
   def profile_params
