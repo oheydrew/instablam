@@ -1,5 +1,8 @@
 <h1>InstaBlam!</h1>
-<hr>
-    <% @posts.each do |post| %>
-      <%= render 'partials/userpost', post: post %>
-    <% end %>
+  <% @posts.each do |post| %>
+    <div>
+      <p>
+        <%= render 'partials/userpost', post: post %>
+      </p>
+    </div>
+  <% end %>

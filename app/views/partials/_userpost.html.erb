@@ -1,7 +1,13 @@
-<br/>
-<div class="d-flex justify-content-between flex-column">
-    <p><%= image_tag post.image_data, width: "100%" %></p>
-    <p><%= post.caption %></p>
-    <p><%= post.user.email %> | <%= link_to post.created_at.strftime("%A, %B %d @ %H:%M"), post_path(post[:id]) %></p>
-    <hr>
+<div class="card text-white bg-dark border" style="width: 100%">
+  <%= image_tag post.image_data, width: "100%", class:"card-img-top", alt:"#{post.user.user_name}'s post ##{post.id}" %>
+  <div class="card-body">
+    <p class="card-text">
+        Likes: <%= post.likes %> | Comments: <%= post.comment_count %><br/>
+        <%= link_to post.created_at.strftime("%A, %B %d @ %H:%M"), post_path(post[:id]) %></br>
+    </p>
+    <p class="card-text">
+        <%= post.caption %>
+    </p>
+    <%# Edit / Delete bittons if authorized user %>
+  </div>
 </div>

@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
   has_one :profile
+
+  def user_name
+    profile.user_name
+  end
 end
