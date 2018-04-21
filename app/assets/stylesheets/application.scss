@@ -63,3 +63,16 @@ input[type="submit"] {
 .navbar {
     background-color: var(--color-bg-main);
 }
+
+.square-image{
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+}
+.square-image img {
+      position: absolute;
+      max-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+}

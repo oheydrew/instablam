@@ -3,8 +3,10 @@
 
 <div class="d-flex justify-content-between flex-wrap">
     <% @posts.each do |post| %>
-        <div class="d-block p-2">
-            <%= link_to image_tag(post.image_data, height: 175, class: 'img rounded border'), post_path(post[:id]) %>
+        <div class="d-block p-2 col-md-4">
+            <div class="square-image rounded border bg-warning">
+                <%= link_to image_tag(post.image_data), post_path(post[:id]) %>
+            </div>
         </div>
     <% end %>
 </div>
