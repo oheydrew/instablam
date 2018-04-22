@@ -39,6 +39,8 @@ a:visited {
 
 a:hover {
     color: var(--color-highlight-main);
+    text-decoration: none;
+    background-color: transparent;
 }
 
 textarea, input, select {
@@ -73,4 +75,7 @@ input[type="submit"] {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
+}
+.square-image a:hover {
+    border-color: var(--color-highlight-main);
 }
