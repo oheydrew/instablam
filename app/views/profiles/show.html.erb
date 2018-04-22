@@ -1,3 +1,5 @@
-<%= render partial: 'partials/userheader' %>
+<%= render partial: 'partials/user_header', locals: { profile: @profile } %>
+<p></p>
+<%= render partial: 'partials/posts_grid', locals: { posts: @posts } %>
 
 <%= link_to 'Edit', profile_edit_path(@profile) %> | <%= link_to 'Back', root_path %>

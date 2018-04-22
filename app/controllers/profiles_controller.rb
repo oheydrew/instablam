@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
     # redirect_to :root unless user_signed_in?
 
     @profile = current_user.profile
-
+    @posts = @profile.user.posts
   end
 
   def edit

@@ -1,4 +1,4 @@
-<div class="card text-white bg-dark border" style="width: 100%">
+<div class="card text-white bg-dark w-100">
   <%= image_tag post.image_data, width: "100%", class:"card-img-top", alt:"#{post.user.user_name}'s post ##{post.id}" %>
   <div class="card-body">
     <p class="card-text">
@@ -8,6 +8,6 @@
     <p class="card-text">
         <%= post.caption %>
     </p>
-    <%# Edit / Delete bittons if authorized user %>
+    <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }  %>
   </div>
 </div>

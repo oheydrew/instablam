@@ -9,4 +9,7 @@ class Profile < ApplicationRecord
     address.concat "#{thoroughfare}, #{city}, #{administrative_area}, #{postal_code}, #{country}"
   end
 
+  def coordinates
+    "#{latitude},#{longitude}"
+  end
 end
