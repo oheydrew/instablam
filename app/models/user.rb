@@ -11,4 +11,9 @@ class User < ApplicationRecord
   def user_name
     profile.user_name
   end
+
+  def admin
+    false
+  end
+
 end

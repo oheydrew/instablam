@@ -14,13 +14,13 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user = current_user
 
-    # if @profile.save
-    #   flash[:notice] = 'New Profile Created'
-    #   redirect_to root_path
-    # else
-    #   flash[:notice] = 'Profile Not Created'
-    #   redirect_to back
-    # end
+    if @profile.save
+      flash[:warning] = 'New Profile Created'
+      redirect_to profile_path
+    else
+      flash[:warning] = 'Profile Not Created'
+      redirect_to back
+    end
 
   end
 
@@ -28,10 +28,10 @@ class ProfilesController < ApplicationController
     @profile = current_user.profile
 
     if @profile.update(profile_params)
-      flash[:notice] = 'New Profile Created'
+      flash[:warning] = 'New Profile Created'
       redirect_to profile_path
     else
-      flash[:notice] = 'Please enter the required fields'
+      flash[:warning] = 'Please enter the required fields'
       redirect_to back
     end
   end

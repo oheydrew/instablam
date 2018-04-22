@@ -1,8 +1,12 @@
 class Profile < ApplicationRecord
   belongs_to :user
 
+  validates :user_name, :avatar_data, :thoroughfare, :city, :administrative_area, :postal_code, :country, presence: true
+
   def full_address
-    "#{premise}, #{thoroughfare}, #{city}, #{administrative_area}, #{postal_code}, #{country}"
+    address = ''
+    address.concat "#{premise}, " unless premise.nil?
+    address.concat "#{thoroughfare}, #{city}, #{administrative_area}, #{postal_code}, #{country}"
   end
 
 end

@@ -5,17 +5,18 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    authorize @posts
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    authorize @post
   end
 
   # GET /posts/1/edit
@@ -27,6 +28,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
+    authorize @post
 
     respond_to do |format|
       if @post.save
@@ -64,13 +66,14 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+    authorize @post
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.require(:post).permit(:user_id, :image_data, :caption, :like_id, :comment_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def post_params
+    params.require(:post).permit(:user_id, :image_data, :caption, :like_id, :comment_id)
+  end
 end

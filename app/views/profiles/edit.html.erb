@@ -1,6 +1,6 @@
 <h1>Editing Profile</h1>
 
-<%= form_with(model: @profile) do |form| %>
+<%= form_with(model: @profile, url: profile_path) do |form| %>
     <p>
         <%= form.label :user_name %><br/>
         <%= form.text_field :user_name %>
