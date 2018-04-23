@@ -22,6 +22,8 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'pundit'
 # Use country_select for country codes
 gem 'country_select'
+# Use mailgun-rails for mailing
+gem 'mailgun-ruby'
 
 # ------------------------------------- RAILS DEFAULT
 
