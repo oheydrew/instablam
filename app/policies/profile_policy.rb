@@ -1,4 +1,4 @@
-class PostPolicy < ApplicationPolicy
+class ProfilePolicy < ApplicationPolicy
 
   def index?
     true
@@ -19,12 +19,12 @@ class PostPolicy < ApplicationPolicy
   private
 
   # just a nice little namespace method
-  def post
+  def profile
     record
   end
 
   def is_owner?
-    user == post.user
+    user == profile.user
   end
 
   def is_admin?
