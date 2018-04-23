@@ -1,2 +1,17 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<h1>Get In Contact</h1>
+
+<%= form_for :contact do |form| %>
+    <p>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </p>
+
+    <p>
+        <%= form.label :message %>
+        <%= form.text_field :message %>
+    </p>
+    
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

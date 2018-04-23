@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts
   root 'pages#index'
 
-  get 'pages/contact'
+  get '/contact', to: 'pages#contact'
 
   devise_for :users
 

@@ -5,4 +5,9 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def contact_email
+    ContactMailer.send_email.deliver_now
+    render :contact # in lieu of routing to contact/
+  end
 end
